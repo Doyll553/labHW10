@@ -1,11 +1,46 @@
 .genreTag {
   padding:4px 8px;
-  border: 1px solid black;
+  border: 5px solid white;
   margin: 4px;
+  color: lightblue;
+  font-family: New Tegomin;
 }
 
 .songContainer{
   padding:16px 24px;
-  border:1px solid black;
+  border:5px solid white;
   margin:8px;
+}
+body{
+    background-image: url("pic/pearl.jpg");
+}
+button{
+    background-color: #a87947;
+    color:lightblue;
+    font-family: New Tegomin;
+    font-size: 20px;
+    border: none;
+}
+p{  font-family: New Tegomin;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    line-height: 1px;
+}
+h1{
+    text-align: center;
+    font-size: 90px;
+    font-family: Ultra;
+    color:#ff0000;
+    line-height: 30px;
+}
+h2{
+    text-align: center;
+    font-size: 90px;
+    font-family: Ultra;
+    color: lightblue;
+    line-height: 10px;
+}
+#container{
+    background-color:#c4ab91;
 }

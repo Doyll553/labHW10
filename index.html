@@ -5,11 +5,24 @@
     <meta name="viewport" content="width=device-width">
     <title>My Playlist</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
   </head>
   <body>
     <h1>My Playlist</h1>
-    <!-- Add filter buttons here: -->
-
+    <div class="filter">
+    <button id="folk">folk</button>
+    <button id="pop">pop</button>
+    <button id="soul">soul</button>
+    <button id="alternative">alternativerock</button>
+    <button id="funk">funk</button>
+    <button id="indie">indie</button>
+    <button id="jazz">jazz</button>
+    <button id="rock">rock</button>
+    <button id="reset">reset</button>
+    </div>
     <div id="container"></div>
     <script src="lib/airtable.browser.js"></script>
     <script src="script.js"></script>

@@ -7,15 +7,15 @@ var Airtable = require("airtable");
 // use the airtable library to get a variable that represents one of our bases
 // We needed to put in the right apiKey and
 // base ID here!
-var base = new Airtable({ apiKey: "MY_API_KEY" }).base(
-  "BASE_ID"
+var base = new Airtable({ apiKey: "keyDvpfoibL19TD8A" }).base(
+  "appc43zdPABn5b3OG"
 );
 
 // Get the "songs" table from the base,
 // specify the view (which should be SORTED by rating),
 // and specify the callback functions that will receive each page of data
 base("songs").select({
-  // TODO: add your view in here
+    view: "ratings"
 }).eachPage(gotPageOfData, gotAllData);
 
 // an empty array to hold our songs data
@@ -88,7 +88,6 @@ function showData() {
 
     let ratingElement = document.createElement("p");
     ratingElement.innerText = "Rating: "+ song.fields.rating;
-    
     songContainer.appendChild(ratingElement);
 
 
@@ -103,21 +102,114 @@ function showData() {
       genreElement.classList.add("genreTag");
       genreElement.innerText = genre;
       songContainer.appendChild(genreElement);
+      
+      songContainer.classList.add(genre);
+
 
       // TODO: Add this genre name as a class to the songContainer
+    // let filterFolk = document.querySelector("#folk");
+    // filterFolk.addEventListener("click", function(){
 
+    //  if (songContainer.classList.contains("folk")){
+    //      songConntainer.display = ("folk");
 
-    });
+         
+    })
 
 
     /***********
      TODO: CREATE FILTER-BY-GENRE FUNCTIONALITY
      **********/
+    let filterFolk = document.querySelector("#folk");
+    filterFolk.addEventListener("click", function(){
 
+        if (songContainer.classList.contains("folk")){
+        songContainer.style.display = "block";
+         }else{
+        songContainer.style.display = "none"
+    }
 
-     
+    });
+
+    let filterPop = document.querySelector("#pop");
+    filterPop.addEventListener("click", function(){
+
+    if (songContainer.classList.contains("pop")){
+        songContainer.style.display = "block";
+    }else{
+        songContainer.style.display = "none"
+    }
+
+    });
+
+    let filterSoul = document.querySelector("#soul");
+    filterSoul.addEventListener("click", function(){
+
+    if (songContainer.classList.contains("soul")){
+        songContainer.style.display = "block";
+    }else{
+        songContainer.style.display = "none"
+    }
+
+    });
+
+    let filterAltrock = document.querySelector("#alternative");
+    filterAltrock.addEventListener("click", function(){
+
+    if (songContainer.classList.contains("alternativerock")){
+        songContainer.style.display = "block";
+    }else{
+        songContainer.style.display = "none"
+    }
+
+    });
+
+    let filterFunk = document.querySelector("#funk");
+    filterFunk.addEventListener("click", function(){
+
+    if (songContainer.classList.contains("funk")){
+        songContainer.style.display = "block";
+    }else{
+        songContainer.style.display = "none"
+    }
+
+    });
+
+    let filterIndie = document.querySelector("#indie");
+    filterIndie.addEventListener("click", function(){
+
+    if (songContainer.classList.contains("indie")){
+        songContainer.style.display = "block";
+    }else{
+        songContainer.style.display = "none"
+    }
+    });
+
+    let filterJazz = document.querySelector("#jazz");
+    filterJazz.addEventListener("click", function(){
+
+    if (songContainer.classList.contains("jazz")){
+        songContainer.style.display = "block";
+    }else{
+        songContainer.style.display = "none"
+    }
+    });
+
+    let filterRock = document.querySelector("#rock");
+    filterRock.addEventListener("click", function(){
+
+    if (songContainer.classList.contains("rock")){
+        songContainer.style.display = "block";
+    }else{
+        songContainer.style.display = "none"
+    }
+    });
+
+    let filterReset = document.querySelector("#reset");
+    filterReset.addEventListener("click", function(){
+        songContainer.style.display = "block"; 
+    });
 
     songsContainer.appendChild(songContainer);
-
-  });
+    });
 }
